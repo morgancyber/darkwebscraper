@@ -23,7 +23,7 @@ Step 1: Import Necessary Libraries <br/>
 <br />
 Step 2: Define the Main Function
 
-python
+
 
     def fetch_dark_web_mentions(organization_name, key_personnel, critical_assets):
 
@@ -45,7 +45,7 @@ Step 3: Set Dark Web URL and Make a GET Request
 
 Step 4: Check Response Status
 
-python
+
 
     if response.status_code == 200:
 
@@ -54,7 +54,7 @@ python
 
 Step 5: Parse HTML Content with BeautifulSoup
 
-python
+
 
         soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -63,7 +63,7 @@ python
 
 Step 6: Extract Text Content
 
-python
+
 
         dark_web_text = soup.get_text()
 
@@ -90,7 +90,7 @@ Step 8: Check for Potential Threat
 
 Step 9: Check for Mentions
 
-python
+
 
         if any(keyword.lower() in dark_web_text.lower() for keyword in [organization_name] + key_personnel + critical_assets):
 
